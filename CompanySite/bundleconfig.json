@@ -1,0 +1,16 @@
+[
+  {
+    "outputFileName": "wwwroot/js/scripts.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/jquery.min.js",
+      "wwwroot/lib/bootstrap/js/bootstrap.bundle.min.js",
+
+      "wwwroot/js/isotope.js",
+      "wwwroot/js/accordions.js",
+      "wwwroot/js/custom.js",
+      "wwwroot/js/isotope.js",
+      "wwwroot/js/slick.js",
+      "wwwroot/js/owl.js"
+    ]
+  }
+]
