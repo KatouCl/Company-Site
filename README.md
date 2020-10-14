@@ -11,7 +11,7 @@ Password: "admin";
 
 //Migration 
 -- dotnet tool install --global dotnet-ef --version 3.1.4 
-- если не создается миграция, то нужно установить инструмент, но или установить пакет NuGet "Microsoft.EntityFrameworkCore.Tools"
+если не создается миграция, то нужно установить инструмент, но или установить пакет NuGet "Microsoft.EntityFrameworkCore.Tools"
 
 //Созданеи миграций (консоль в папке проекта)
 -- dotnet ef migrations add _Initial
