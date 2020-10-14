@@ -1,5 +1,5 @@
 # Company-Site
-h2 Строка подключения к БД хранится в файле appsettings.json 
+## Строка подключения к БД хранится в файле appsettings.json 
  > ` "ConnectionString": "Data Source = WIN-2GGAI1J1JRQ\\SQLEXPRESS; Database=dbCompanyBtw; 
                                     Persist Security Info=false; User ID='sa'; Password='sa';
                                     MultipleActiveResultSets=True; Trusted_Connection=False;", ` 
