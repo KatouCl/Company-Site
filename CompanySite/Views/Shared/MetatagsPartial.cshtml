@@ -1,0 +1,21 @@
+﻿<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="TemplateMo">
+
+@if (ViewBag.Title != null)
+{
+    <title>ViewBag.Title</title>
+}
+else
+{
+    <title>Главная страница</title>
+}
+@if (ViewBag.Description != null)
+{
+    <meta name="description" content="@ViewBag.Description" />
+}
+@if (ViewBag.KeyWords != null)
+{
+    <meta name="keyWords" content="@ViewBag.KeyWords" />
+}
