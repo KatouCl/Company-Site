@@ -1,0 +1,7 @@
+﻿.div-box {
+    padding: 20px 0;
+}
+
+.div-box.laber {
+    display: block;
+}

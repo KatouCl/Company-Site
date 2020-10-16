@@ -5,15 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Areas\Admin\Views\_ViewImports.cshtml" />
     <Content Remove="bundleconfig.json" />
     <Content Remove="Views\_ViewImports.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Models\ViewComponents\" />
-    <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\lib\" />
     <Folder Include="wwwroot\sass\" />
@@ -32,6 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Admin\Views\ServiceItems\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\TextFields\Edit.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="Views\_ViewImports.cshtml" />
   </ItemGroup>

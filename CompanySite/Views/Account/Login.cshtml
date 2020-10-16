@@ -1,0 +1,54 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    @await Html.PartialAsync("CssLoginPartial");
+
+    <title>Вход</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Вход</h5>
+
+                    <form class="form-signin" asp-area="" asp-controller="Account" asp-action="Login" method="post" asp-route-returnUrl="@ViewBag.returnUrl" >
+                        <div asp-validation-summary="All"></div>
+
+                        <div class="form-label-group">
+                            <input asp-for="UserName" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <label asp-for="UserName" for="inputEmail"></label>
+                            <span asp-validation-for="UserName"></span>
+                        </div>
+
+                            <div class="form-label-group">
+                                <input asp-for="Password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <label asp-for="Password" for="inputPassword"></label>
+                                <span asp-validation-for="Password"></span>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input asp-for="RememberMe" type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label asp-for="RememberMe" class="custom-control-label" for="customCheck1"></label>
+                                <span asp-validation-for="RememberMe"></span>
+                            </div>
+
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Войти">Войти</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

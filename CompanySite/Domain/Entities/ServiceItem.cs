@@ -10,8 +10,6 @@ namespace CompanySite.Domain.Entities
     public class ServiceItem : EntityBase
     {
         [Required(ErrorMessage = "Заполните название услуги")]
-        public string CodeWord { get; set; }
-
         [Display(Name = "Название услуги")]
         public override string Title { get; set; }
 

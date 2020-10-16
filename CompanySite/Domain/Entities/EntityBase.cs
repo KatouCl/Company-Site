@@ -14,6 +14,7 @@ namespace CompanySite.Domain.Entities
 
         [Required]
         public Guid Id { get; set; }
+
         [Display(Name = "Название (заголовок)")]
         public virtual string Title { get; set; }
 
@@ -27,15 +28,15 @@ namespace CompanySite.Domain.Entities
         public virtual string TitleImagePath { get; set; }
 
         [Display(Name = "SEO метатег Title")]
-        public virtual string MetaTitle { get; set; }
+        public string MetaTitle { get; set; }
 
         [Display(Name = "SEO метатег Description")]
-        public virtual string MetaDescription { get; set; }
+        public string MetaDescription { get; set; }
 
         [Display(Name = "SEO метатег Keywords")]
-        public virtual string MetaKeywords { get; set; }
+        public string MetaKeywords { get; set; }
 
-        [DataType(DataType.Time)] 
+        [DataType(DataType.Time)]
         public DateTime DateAdded { get; set; }
     }
 }

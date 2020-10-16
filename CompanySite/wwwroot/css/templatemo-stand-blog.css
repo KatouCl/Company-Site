@@ -364,13 +364,13 @@ header .navbar {
 	margin-top: 100px;
 }
 
-.call-to-action .main-content {
-	padding: 40px;
-	background-image: url(../images/cta-bg.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+	.call-to-action .main-content {
+		padding: 40px;
+		background-image: url(http://placehold.it/1150x150);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 
 .call-to-action .main-content span {
 	color: #f48840;

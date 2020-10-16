@@ -58,8 +58,20 @@ namespace CompanySite
                 options.SlidingExpiration = true;
             });
 
+            //настройка политики авторизации для Администратора в области area
+            services.AddAuthorization(a =>
+            {
+                a.AddPolicy("AdminArea", policy =>
+                    {
+                        policy.RequireRole("admin");
+                    });
+            });
+
             //поддержка controllers и views
-            services.AddControllersWithViews()
+            services.AddControllersWithViews(x =>
+                    {
+                        x.Conventions.Add(new AdminAreaAuthorization("Admin","AdminArea"));
+                    })
                 //совместимость asp core 3.0
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
@@ -85,6 +97,8 @@ namespace CompanySite
             //маршруты 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("Admin", "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute("default","{controller=Home}/{action=Index}/{id?}");
             });
         }

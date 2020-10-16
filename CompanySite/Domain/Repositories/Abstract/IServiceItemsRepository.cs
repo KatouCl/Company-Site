@@ -10,7 +10,7 @@ namespace CompanySite.Domain.Repositories.Abstract
     public interface IServiceItemsRepository
     {
         //Выборка всех текстовых полей
-        IQueryable<ServiceItem> GetTextFields();
+        IQueryable<ServiceItem> GetServiceItems();
         //Выборка поля по id
         ServiceItem GetServiceItemById(Guid id);
         //Сохранение и изменения 

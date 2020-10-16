@@ -9,13 +9,13 @@ namespace CompanySite.Domain.Entities
 {
     public class TextField : EntityBase
     {
-        [Required]
+        [Required] 
         public string CodeWord { get; set; }
 
         [Display(Name = "Название страницы (заголовок)")]
         public override string Title { get; set; } = "Информационная страница";
 
-        [Display(Name = "Содержание станицы")] 
+        [Display(Name = "Cодержание страницы")]
         public override string Text { get; set; } = "Содержание заполняется администратором";
     }
 }

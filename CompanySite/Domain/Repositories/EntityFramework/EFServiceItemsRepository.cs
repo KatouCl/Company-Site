@@ -18,7 +18,7 @@ namespace CompanySite.Domain.Repositories.EntityFramework
             this.context = context;
         }
 
-        public IQueryable<ServiceItem> GetTextFields()
+        public IQueryable<ServiceItem> GetServiceItems()
         {
             return context.ServiceItems;
         }
