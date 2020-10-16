@@ -5,8 +5,8 @@
                                     MultipleActiveResultSets=True; Trusted_Connection=False;", ` 
 
 ### Логин и пароль администратора
- > ` User Admin
-Login: "admin";
+User Admin
+> `Login: "admin";
 Password: "admin"; `
 
 ### Migration 
