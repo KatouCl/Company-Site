@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CompanySite.Domain.Repositories.Abstract;
+﻿using CompanySite.Domain.Repositories.Abstract;
 
 namespace CompanySite.Domain
 {
@@ -11,11 +6,13 @@ namespace CompanySite.Domain
     {
         public ITextFieldsRepository TextFields { get; set; }
         public IServiceItemsRepository ServiceItems { get; set; }
+        public IFeedBackRepository FeedBack { get; set; }
 
-        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository)
+        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository/*, IFeedBackRepository feedBackRepository*/)
         {
-            this.ServiceItems = serviceItemsRepository;
-            this.TextFields = textFieldsRepository;
+            TextFields = textFieldsRepository;
+            ServiceItems = serviceItemsRepository;
+            //FeedBack = feedBackRepository;
         }
     }
 }

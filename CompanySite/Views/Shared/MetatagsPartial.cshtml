@@ -4,7 +4,7 @@
 <meta name="description" content="">
 <meta name="author" content="TemplateMo">
 
-@if (ViewBag.Title != null)
+@if (@ViewBag.Title != null)
 {
     <title>ViewBag.Title</title>
 }
@@ -12,11 +12,11 @@ else
 {
     <title>@Config.CompanyName</title>
 }
-@if (ViewBag.Description != null)
+@if (@ViewBag.Description != null)
 {
     <meta name="description" content="@ViewBag.Description" />
 }
-@if (ViewBag.KeyWords != null)
+@if (@ViewBag.KeyWords != null)
 {
     <meta name="keyWords" content="@ViewBag.KeyWords" />
 }

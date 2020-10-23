@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompanySite.Domain.Entities
 {
@@ -13,7 +8,7 @@ namespace CompanySite.Domain.Entities
         protected EntityBase() => DateAdded = DateTime.UtcNow;
 
         [Required]
-        public Guid Id { get; set; }
+        public Guid Id { get;set; }
 
         [Display(Name = "Название (заголовок)")]
         public virtual string Title { get; set; }
@@ -38,5 +33,6 @@ namespace CompanySite.Domain.Entities
 
         [DataType(DataType.Time)]
         public DateTime DateAdded { get; set; }
+
     }
 }

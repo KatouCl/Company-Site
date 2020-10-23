@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="main-button">
-                                    <a rel="nofollow" href="#" target="_parent">Заказать звонок</a>
+                                    <a rel="nofollow" target="_parent" asp-area="" asp-controller="FeedBack" asp-action="Index">Заказать звонок</a>
                                 </div>
                             </div>
                         </div>
@@ -48,16 +48,13 @@
         </div>
     </section>
 
-
     <section class="blog-posts">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="all-blog-posts">
                         <div class="row">
-
                             @RenderBody()
-
                         </div>
                     </div>
                 </div>
@@ -98,6 +95,5 @@
             }
         }
     </script>
-
 </body>
 </html>

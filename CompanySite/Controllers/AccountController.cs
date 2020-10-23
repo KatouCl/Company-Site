@@ -16,7 +16,6 @@ namespace CompanySite.Controllers
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
 
-
         public AccountController(UserManager<IdentityUser> userMgr, SignInManager<IdentityUser> singInMngr)
         {
             this.userManager = userMgr;

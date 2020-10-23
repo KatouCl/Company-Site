@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CompanySite.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CompanySite.Domain.Entities;
+using CompanySite.Service;
 
 namespace CompanySite.Domain
 {
@@ -16,12 +13,12 @@ namespace CompanySite.Domain
 
         public DbSet<TextField> TextFields { get; set; }
         public DbSet<ServiceItem> ServiceItems { get; set; }
-
+        public DbSet<FeedBack> FeedBacks { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            //Создание роли администратора
             modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
             {
                 Id = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
@@ -29,45 +26,43 @@ namespace CompanySite.Domain
                 NormalizedName = "ADMIN"
             });
 
-            //Создание пользователя: Администратор
             modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
             {
                 Id = "3b62472e-4f66-49fa-a20f-e7685b9565d8",
-                UserName = "Admin",
+                UserName = "admin",
                 NormalizedUserName = "ADMIN",
-                Email = "CompanyName@gmail.com",
-                NormalizedEmail = "CompanyName@gmail.com",
+                Email = "admin@email.com",
+                NormalizedEmail = "admin@EMAIL.COM",
                 EmailConfirmed = true,
-                PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "admin"),
+                PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "1"),
                 SecurityStamp = string.Empty
             });
 
-            //Дал роль администратора пользователю
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
             {
                 RoleId = "44546e06-8719-4ad8-b88a-f271ae9d6eab",
                 UserId = "3b62472e-4f66-49fa-a20f-e7685b9565d8"
             });
 
-            //
-            modelBuilder.Entity<TextField>().HasData(new TextField
-            {
-                Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"),
-                CodeWord = "PageIndex",
+            modelBuilder.Entity<TextField>().HasData(new TextField { 
+                Id = new Guid("63dc8fa6-07ae-4391-8916-e057f71239ce"), 
+                CodeWord = "PageIndex", 
                 Title = "Главная"
             });
             modelBuilder.Entity<TextField>().HasData(new TextField
             {
-                Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"),
-                CodeWord = "PageServices",
+                Id = new Guid("70bf165a-700a-4156-91c0-e83fce0a277f"), 
+                CodeWord = "PageServices", 
                 Title = "Наши услуги"
             });
             modelBuilder.Entity<TextField>().HasData(new TextField
             {
-                Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"),
-                CodeWord = "PageContacts",
+                Id = new Guid("4aa76a4c-c59d-409a-84c1-06e6487a137a"), 
+                CodeWord = "PageContacts", 
                 Title = "Контакты"
             });
         }
+
+        
     }
 }

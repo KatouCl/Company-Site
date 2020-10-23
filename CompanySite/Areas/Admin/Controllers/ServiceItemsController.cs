@@ -53,5 +53,7 @@ namespace CompanySite.Areas.Admin.Controllers
             dataManager.ServiceItems.DeleteServiceItem(id);
             return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
         }
+
+        
     }
 }
