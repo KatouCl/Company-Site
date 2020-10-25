@@ -24,20 +24,20 @@
                     <img src="~/images/@entity.TitleImagePath" alt="">
                 </div> 
                 <div class="down-content">
-                    <span>
+                    @*<span>
                         @entity.Subtitle
-                    </span>
+                    </span>*@
                     <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
                     <h4>
-                        <div style="color: red;"> @entity.Title</div>
+                        @entity.Title
                     </h4>
                     </a>
-                    <ul class="post-info">
+                    <ul class="post-info">  
                         @*<li><a href="#">Admin</a></li>*@
                         @*<li><a href="#">Date</a></li>*@
                     </ul>
                     <p>
-                        @entity.Text
+                        @entity.Subtitle
                     </p>
                     <div class="post-options">
                         <div class="row">

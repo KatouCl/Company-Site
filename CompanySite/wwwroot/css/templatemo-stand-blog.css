@@ -406,7 +406,7 @@ header .navbar {
 }
 
 .blog-posts .blog-thumb img {
-	width: 700px;
+	width: 730px;
 	height: 400px;
 	overflow: hidden;
 }
@@ -1090,5 +1090,10 @@ footer p a:hover {
 	.contact-us .contact-information {
 		margin-left: 0px;
 		margin-top: 60px;
+	}
+	.btn-info button {
+		color: #fff;
+		background-color: #f48840;
+		border-color: #17a2b8;
 	}
 }

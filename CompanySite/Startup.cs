@@ -33,6 +33,7 @@ namespace CompanySite
             //подключение фукционала как сервисы. Связывания интерфейса с его реализацией
             services.AddTransient<IServiceItemsRepository, EFServiceItemsRepository>();
             services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
+            services.AddTransient<IFeedBackRepository, EFFeedBackRepository>();
             services.AddTransient<DataManager>();
 
             //поключение БД

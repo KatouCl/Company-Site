@@ -11,11 +11,11 @@ namespace CompanySite.Areas.Admin.Controllers
 {
     public class FeedBackController : Controller
     {
-        private readonly IFeedBackRepository feedBackRepository;
+        private readonly DataManager dataManager;
 
-        public FeedBackController(IFeedBackRepository feedBackRepository)
+        public FeedBackController(DataManager dataManager)
         {
-            this.feedBackRepository = feedBackRepository;
+            this.dataManager = dataManager;
         }
 
         public IActionResult Index()
@@ -28,8 +28,8 @@ namespace CompanySite.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                feedBackRepository.SaveFeedBack(model);
-                return RedirectToAction();
+                dataManager.FeedBack.SaveFeedBack(model);
+                return Redirect("/Home/Index");
             }
 
             return View(model);

@@ -9,7 +9,8 @@
 <head>
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">*@
+    @await Html.PartialAsync("CssPartial")
 </head>
 <body>
     <div> </div>
@@ -18,18 +19,17 @@
             <div class="col-md-4"> </div>
             <div class="col-md-4">
                 <h4>Заказать звонок</h4>
-                <form action="./mail.php" method="post">
+                <form method="post" asp-area="" asp-controller="FeedBack" asp-action="Add" s>
+                    <div asp-validation-summary="All"></div>
                     <div class="form-group">
                         <label for="name">Ваше имя:</label>
-                        <input type="name" name="name" class="form-control" id="name" placeholder="Name">
+                        <input asp-for="Name" type="text" id="name" name="name" required class="form-control" placeholder="Имя">
+                        <span asp-validation-for="Name"></span>
                     </div>
                     <div class="form-group">
                         <label for="phone">Номер телефона:</label>
-                        <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Сообщение:</label>
-                        <textarea class="form-control" name="message" rows="3"></textarea>
+                        <input asp-for="PhoneNumber" id="PhoneNumber" class="form-control" type="tel" placeholder="Телефон" required>
+                        <span asp-validation-for="PhoneNumber"></span>
                     </div>
                     <button type="submit" class="btn btn-info">Отправить сообщение</button>
                 </form>

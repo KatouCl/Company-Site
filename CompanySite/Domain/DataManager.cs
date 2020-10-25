@@ -8,11 +8,11 @@ namespace CompanySite.Domain
         public IServiceItemsRepository ServiceItems { get; set; }
         public IFeedBackRepository FeedBack { get; set; }
 
-        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository/*, IFeedBackRepository feedBackRepository*/)
+        public DataManager(ITextFieldsRepository textFieldsRepository, IServiceItemsRepository serviceItemsRepository, IFeedBackRepository feedBackRepository)
         {
             TextFields = textFieldsRepository;
             ServiceItems = serviceItemsRepository;
-            //FeedBack = feedBackRepository;
+            FeedBack = feedBackRepository;
         }
     }
 }
